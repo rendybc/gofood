@@ -17,7 +17,6 @@ echo color("green","# # # # # # # # # # # # # # # # # # # # # # # \n");
 	$input = trim(fgets(STDIN));
 	echo "\e[92m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n";
 		goto ulang;
-         }else{
 
 	return rtrim( $input, "\n" );
 ulang:
