@@ -164,15 +164,17 @@ echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
          }
          }
          }else{
-         echo color("red","-] KODE OTP LO SALAH");
+         echo color("red","-] Kode Otp Mu Salah");
+
          echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n");
-         echo color("nevy","!] INPUT ULANG NOMOR LO..\n");
+         echo color("nevy","!] Input Kembali Nomor Mu\n");
          goto otp;
          }
          }else{
-         echo color("red","-] NOMOR SALAH/ERROR BY SYSTEM");
+         echo color("red","-] Nomor Salah/Error By Sistem");
+
          echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n");
-         echo color("nevy","!] MASUKAN LAGI\n");
+         echo color("nevy","!] Masukan Lagi\n");
          goto ulang;
          }
 //  }
