@@ -13,7 +13,7 @@ echo color("purple","# # # # # # # # # # # # # # # # # # # # # # # \n");
 	echo "\n";
 	echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
 	echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-	echo color("nevy","\e[61mInput Nama Mu Disini ?: ";
+	echo color("nevy","\e[61mInput Nama Mu Disini ?: ");
 	$input = trim(fgets(STDIN));
 	echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
 		goto ulang;
