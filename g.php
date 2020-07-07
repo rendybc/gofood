@@ -164,15 +164,15 @@ echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
          }
          }
          }else{
-         echo color("red","Kode Otp Mu Salah");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n");
-         echo color("nevy","!] Input Kembali Nomor Mu\n");
+         echo color("red","-] Otp yang anda input salah");
+         echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+         echo color("nevy","!] Silahkan input kembali\n");
          goto otp;
          }
          }else{
-         echo color("red","Nomor Salah/Error By Sistem");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n");
-         echo color("nevy","!] Masukan Lagi\n");
+         echo color("red","-] Nomor sudah teregistrasi");
+         echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+         echo color("nevy","!] Silahkan registrasi kembali\n");
          goto ulang;
          }
 //  }
