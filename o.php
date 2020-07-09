@@ -127,7 +127,7 @@ $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header
          echo color("red","-] Nomor sudah teregistrasi");
          echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
          echo color("nevy","!] Silahkan registrasi kembali\n");
-         goto ulang;
+         goto repeat;
          }
 //  }
 
