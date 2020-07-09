@@ -10,12 +10,23 @@ $header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
 $header[] = 'X-Location: id_ID';
 $header[] ='Authorization: Bearer '.$token;
 $header[] = 'pin:'.$pin.'';
-//CHECKER SALDO GOPAY
-$detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header);
-         $saldoo = json_decode($detail[0]);
-                $saldo = $saldoo->data->balance;
-                    echo color("yellow","Sisa Saldo Gopay = $saldo \n");
 // function change(){
+        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
+        $register = request("/v5/customers", null, $data);
+        if(strpos($register, '"otp_token"')){
+        $otptoken = getStr('"otp_token":"','"',$register);
+        echo color("purple","📶▶️ KODE OTP UDAH GUA KIRIM CUK")."\n";
+        otp:
+        echo color("nevy","💬▶️ Otp : ");
+        $otp = trim(fgets(STDIN));
+        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
+        $verif = request("/v5/customers/phone/verify", null, $data1);
+        if(strpos($verif, '"access_token"')){
+        echo color("purple","✔️▶️ BERHASIL MEMDAFTAR\n");
+        $token = getStr('"access_token":"','"',$verif);
+        $uuid = getStr('"resource_owner_id":',',',$verif);
+        echo color("nevy","+] AKSES TOKEN LO : ".$token."\n\n");
+        save("token.txt",$token);
         echo "\n".color("nevy"," 🥂CLAIM VOC A🥂.");
         echo "\n".color("purple","⏳▶️ Please wait");
         for($a=1;$a<=3;$a++){
