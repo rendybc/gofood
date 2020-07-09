@@ -1159,5 +1159,3 @@ $detail_voucher = curl('https://api.gojekapi.com/gopoints/v3/wallet/vouchers?lim
          echo color("red","-] GAGAL!!!\n");
          }
 //  }
-
-// echo change()."\n";
