@@ -26,7 +26,7 @@ echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
 // function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
-        echo color("nevy","📲▶️ NOMOR LO CUK : ");
+        echo color("nevy","📲▶️ TOKEN : ");
         // $no = trim(fgets(STDIN));
         $nohp = trim(fgets(STDIN));
         $nohp = str_replace("62","62",$nohp);
@@ -50,9 +50,9 @@ echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         }
     }
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
-        $register = request("/v5/customers", null, $data);
-        if(strpos($register, '"otp_token"')){
-        $otptoken = getStr('"otp_token":"','"',$register);
+        $login = request("/v5/customers", null, $data);
+        if(strpos($login, '"otp_token"')){
+        $otptoken = getStr('"otp_token":"','"',$login);
         echo color("purple","📶▶️ KODE OTP UDAH GUA KIRIM CUK")."\n";
         otp:
         echo color("nevy","💬▶️ Otp : ");
