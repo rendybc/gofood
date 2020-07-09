@@ -125,17 +125,6 @@ $header[] = 'pin:'.$pin.'';
          }
          }
          }
-         }else{
-         echo color("red","-] Otp yang anda input salah");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-         echo color("nevy","!] Silahkan input kembali\n");
-         goto otp;
-         }
-         }else{
-         echo color("red","-] Nomor sudah teregistrasi");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-         echo color("nevy","!] Silahkan registrasi kembali\n");
-         goto ulang;
          }
 //  }
 
