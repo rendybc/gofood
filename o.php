@@ -138,37 +138,7 @@ $info = curl('https://api.gojekapi.com/v1/chat/profile', null, $header);
         echo "\n".color("purple","                     12. ".$voucher12);
         echo "\n".color("purple","                     13. ".$voucher13);
         echo"\n";
-         setpin:
-         echo "\n".color("nevy","SET PIN GA: y/n ");
-         $pilih1 = trim(fgets(STDIN));
-         if($pilih1 == "y" || $pilih1 == "Y"){
-         //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN LO = 666123 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
-         $data2 = '{"pin":"666123"}';
-         $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
-         echo "Otp pin: ";
-         $otpsetpin = trim(fgets(STDIN));
-         $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-         echo $verifotpsetpin;
-         }else if($pilih1 == "n" || $pilih1 == "N"){
-         die();
-         }else{
-         echo color("red","-] GAGAL!!!\n");
-         }
-         }
-         }
-         }else{
-         echo color("red","-] Otp yang anda input salah");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-         echo color("nevy","!] Silahkan input kembali\n");
-         goto otp;
-         }
-         }else{
-         echo color("red","-] Nomor sudah teregistrasi");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-         echo color("nevy","!] Silahkan registrasi kembali\n");
-         goto ulang;
-         }
 //  }
 
 // echo change()."\n";
+?>
