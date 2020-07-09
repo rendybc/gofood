@@ -24,7 +24,6 @@ $header[] = 'pin:'.$pin.'';
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("purple","Message: ".$message);
-        goto gocar;
         }else{
         echo "\n".color("purple"," Message: ".$message);
         sleep(1);
