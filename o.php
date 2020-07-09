@@ -11,21 +11,19 @@ $header[] = 'X-Location: id_ID';
 $header[] ='Authorization: Bearer '.$token;
 $header[] = 'pin:'.$pin.'';
 // function change(){
-        file_put_contents("token/".$verif['data']['customer']['name'].".txt", $verif['data']['access_token']);
-        echo "\e[93m[X] Mencoba Redeem : PAKEGOFOOD\n";
-        sleep(3);
-        $claim = claim($verif);
-        if ($claim == false)
-            {
-            echo "\e[92m[!]".$voucher."\n";
-            sleep(3);
-            }
-            else{
-                echo "\e[92m[X] ".$claim."\n";
-                sleep(3);
-            }
+function claim($token)
+    {
+    $data = '{"promo_code":"eatlah"}';    
+    $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
+    if ($claim['success'] == 1)
+        {
+        return $claim['data']['message'];
+        }
+      else
+        {
+      save("error_log.txt", json_encode($claim));
+        return false;
+        }
     }
-    }
-
 
 ?>
