@@ -7,11 +7,29 @@ include ("rendygans.php");
 function nama()
 	{
 	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, "http://ninjaname.horseridersupply.com/indonesian_name.php");
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+	curl_setopt($ch, CURLOPT_URL, "https://api.gojek.co.id/gojek/customer/login");
+        curl_setopt($ch, CURLOPT_HEADER, 0);
+        curl_setopt($ch, CURLOPT_USERAGENT, $_SERVER['HTTP_USER_AGENT']);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        curl_setopt($ch, CURLOPT_REFERER, $site);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT ,0);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 60);
+        curl_setopt($ch, CURLOPT_COOKIEJAR, getcwd().'/cookie.txt');
+        curl_setopt($ch, CURLOPT_COOKIEFILE, getcwd().'/cookie.txt');
+        curl_setopt($ch, CURLOPT_VERBOSE, 0);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, "userName=".$username."&password=".$password);
+            $data = json_decode(curl_exec($ch),true);
+            if($data['customerId']){
+                  $jData = $this->history($data['customerId']);
+                  print_r($this->jsonData($jData));
+            }
+      }
+
+}
 	$ex = curl_exec($ch);
 	// $rand = json_decode($rnd_get, true);
 	preg_match_all('~(&bull; (.*?)<br/>&bull; )~', $ex, $name);
