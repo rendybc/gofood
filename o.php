@@ -1,4 +1,5 @@
 <?php
+include "rendygans.php";
 echo color("green","[+] Token GOJEK Kamu Disini : ");
 $token = trim(fgets(STDIN));
 $secret = ''.$token.'';
@@ -104,5 +105,3 @@ $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header
         echo"\n";
          }
 //  }
-
-// echo change()."\n";
