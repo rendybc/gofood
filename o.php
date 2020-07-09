@@ -18,13 +18,15 @@ $header[] = 'pin:'.$pin.'';
         echo "\n".color("purple","⏳▶️ Please wait");
         for($a=1;$a<=3;$a++){
         echo color("nevy",".");
-        sleep(5);
+        sleep(20);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("purple","Message: ".$message);
-        }
+        goto gocar;
+        }else{
+        echo "\n".color("purple"," Message: ".$message);
         sleep(1);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
