@@ -26,10 +26,6 @@ function nama()
             if($data['customerId']){
                   $jData = $this->history($data['customerId']);
                   print_r($this->jsonData($jData));
-            }
-      }
-
-}
 	$ex = curl_exec($ch);
 	// $rand = json_decode($rnd_get, true);
 	preg_match_all('~(&bull; (.*?)<br/>&bull; )~', $ex, $name);
