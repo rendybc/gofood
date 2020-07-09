@@ -59,6 +59,4 @@ $header[] = 'pin:'.$pin.'';
 //  }
 
 // echo change()."\n";
-}
-}
 ?>
