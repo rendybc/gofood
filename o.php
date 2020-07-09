@@ -11,22 +11,6 @@ $header[] = 'X-Location: id_ID';
 $header[] ='Authorization: Bearer '.$token;
 $header[] = 'pin:'.$pin.'';
 // function change(){
-        $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
-        $register = request("/v5/customers", null, $data);
-        if(strpos($register, '"otp_token"')){
-        $otptoken = getStr('"otp_token":"','"',$register);
-        echo color("purple","📶▶️ KODE OTP UDAH GUA KIRIM CUK")."\n";
-        otp:
-        echo color("nevy","💬▶️ Otp : ");
-        $otp = trim(fgets(STDIN));
-        $data1 = '{"client_name":"gojek:cons:android","data":{"otp":"' . $otp . '","otp_token":"' . $otptoken . '"},"client_secret":"83415d06-ec4e-11e6-a41b-6c40088ab51e"}';
-        $verif = request("/v5/customers/phone/verify", null, $data1);
-        if(strpos($verif, '"access_token"')){
-        echo color("purple","✔️▶️ BERHASIL MEMDAFTAR\n");
-        $token = getStr('"access_token":"','"',$verif);
-        $uuid = getStr('"resource_owner_id":',',',$verif);
-        echo color("nevy","+] AKSES TOKEN LO : ".$token."\n\n");
-        save("token.txt",$token);
         echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🔊AUTO CLAIM KAYANYA CUK🔊▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("nevy"," 🥂CLAIM VOC A🥂.");
         echo "\n".color("purple","⏳▶️ Please wait");
@@ -106,26 +90,3 @@ $header[] = 'pin:'.$pin.'';
         echo "\n".color("purple","                     12. ".$voucher12);
         echo "\n".color("purple","                     13. ".$voucher13);
         echo"\n";
-         setpin:
-         echo "\n".color("nevy","SET PIN GA: y/n ");
-         $pilih1 = trim(fgets(STDIN));
-         if($pilih1 == "y" || $pilih1 == "Y"){
-         //if($pilih1 == "y" && strpos($no, "628")){
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN LO = 666123 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
-         $data2 = '{"pin":"666123"}';
-         $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
-         echo "Otp pin: ";
-         $otpsetpin = trim(fgets(STDIN));
-         $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
-         echo $verifotpsetpin;
-         }else if($pilih1 == "n" || $pilih1 == "N"){
-         die();
-         }else{
-         echo color("red","-] GAGAL!!!\n");
-         }
-         }
-         }
-         }
-//  }
-
-// echo change()."\n";
