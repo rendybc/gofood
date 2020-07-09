@@ -1,6 +1,16 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "rendygans.php";
+echo color("purple","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("nevy","  [♥]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo color("nevy","   [♡] TOLONG DIBACA DULU SEBELUM MENGGUNAKAN SC \n");
+echo color("nevy","[♥] KETIK NOMORNYA BEGINI YA 62xxxxxxxxxx \n");
+echo color("nevy","  [♡] JANGAN LUPA FOLLOW IG GUE YA : @Bananacreamy \n");
+echo color("nevy","[♥] KALO GA NGAMBIL OTOMATIS GAGAL BERARTI \n");
+echo color("nevy"," [♡] MAKLUM LAH NAMANYA JUGA SC GRATISAN \n");
+echo color("nevy"," [♥] SCRIPT INI GRATIS, BILA ADA YG JUAL CHAT TELEGRAM \n");
+echo color("purple","# # # # # # # # # # # # # # # # # # # # # # # \n");
+	echo "\n";
 // function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
