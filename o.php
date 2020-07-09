@@ -27,11 +27,12 @@ $header[] = 'pin:'.$pin.'';
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("nevy","+] AKSES TOKEN LO : ".$token."\n\n");
         save("token.txt",$token);
+        echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🔊AUTO CLAIM KAYANYA CUK🔊▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("nevy"," 🥂CLAIM VOC A🥂.");
         echo "\n".color("purple","⏳▶️ Please wait");
         for($a=1;$a<=3;$a++){
         echo color("nevy",".");
-        sleep(5);
+        sleep(20);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -41,63 +42,101 @@ $header[] = 'pin:'.$pin.'';
         }else{
         echo "\n".color("purple"," Message: ".$message);
 	gocar:
- function nama()
-	{
-	$ch = curl_init();
-	curl_setopt($ch, CURLOPT_URL, "http://ninjaname.horseridersupply.com/indonesian_name.php");
-	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-	curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-	curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-	curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
-	$ex = curl_exec($ch);
-	// $rand = json_decode($rnd_get, true);
-	preg_match_all('~(&bull; (.*?)<br/>&bull; )~', $ex, $name);
-	return $name[2][mt_rand(0, 14) ];
-	}
+        echo "\n".color("nevy"," 🥂 CLAIM VOC B🥂. ");
+        echo "\n".color("purple"," ⏳▶️Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("nevy",".");
+        sleep(20);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
+        echo "\n".color("purple","Message: ".$message);
+        goto gofood;
+        }else{
+        echo "\n".color("purple"," Message: ".$message);
+        gofood:
+        echo "\n".color("nevy"," 🥂 CLAIM VOC C🥂.");
+        echo "\n".color("purple"," ⏳▶️Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("nevy",".");
+        sleep(10);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKEGOFOOD2206"}');
+        $message = fetch_value($code1,'"message":"','"');
+        echo "\n".color("purple"," Message: ".$message);
+        echo "\n".color("nevy"," 🥂 CLAIM VOC D🥂.");
+        echo "\n".color("purple"," ⏳▶️Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("nevy",".");
+        sleep(7);
+        }
+        sleep(1);
+        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
+        $messageboba09 = fetch_value($boba09,'"message":"','"');
+        echo "\n".color("purple"," Message: ".$messageboba09);
+        sleep(1);
+        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
+        $total = fetch_value($cekvoucher,'"total_vouchers":',',');
+        $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
+        $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
+        $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
+        $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
+        $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
+        $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
+        $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
+        $voucher8 = getStr1('"title":"','",',$cekvoucher,"8");
+        $voucher9 = getStr1('"title":"','",',$cekvoucher,"9");
+        $voucher10 = getStr1('"title":"','",',$cekvoucher,"10");
+        $voucher11 = getStr1('"title":"','",',$cekvoucher,"11");
+        $voucher12 = getStr1('"title":"','",',$cekvoucher,"12");
+        $voucher13 = getStr1('"title":"','",',$cekvoucher,"13");
+        echo "\n".color("purple"," Total voucher ".$total." : ");
+        echo "\n".color("nevy","                     1. ".$voucher1);
+        echo "\n".color("purple","                     2. ".$voucher2);
+        echo "\n".color("nevy","                     3. ".$voucher3);
+        echo "\n".color("purple","                     4. ".$voucher4);
+        echo "\n".color("nevy","                     5. ".$voucher5);
+        echo "\n".color("purple","                     6. ".$voucher6);
+        echo "\n".color("nevy","                     7. ".$voucher7);
+        echo "\n".color("purple","                     8. ".$voucher8);
+        echo "\n".color("nevy","                     9. ".$voucher9);
+        echo "\n".color("purple","                     10. ".$voucher10);
+	echo "\n".color("nevy","                     11. ".$voucher11);
+        echo "\n".color("purple","                     12. ".$voucher12);
+        echo "\n".color("purple","                     13. ".$voucher13);
+        echo"\n";
+         setpin:
+         echo "\n".color("nevy","SET PIN GA: y/n ");
+         $pilih1 = trim(fgets(STDIN));
+         if($pilih1 == "y" || $pilih1 == "Y"){
+         //if($pilih1 == "y" && strpos($no, "628")){
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN LO = 666123 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
+         $data2 = '{"pin":"666123"}';
+         $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
+         echo "Otp pin: ";
+         $otpsetpin = trim(fgets(STDIN));
+         $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
+         echo $verifotpsetpin;
+         }else if($pilih1 == "n" || $pilih1 == "N"){
+         die();
+         }else{
+         echo color("red","-] GAGAL!!!\n");
+         }
+         }
+         }
+         }else{
+         echo color("red","-] Otp yang anda input salah");
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+         echo color("nevy","!] Silahkan input kembali\n");
+         goto otp;
+         }
+         }else{
+         echo color("red","-] Nomor sudah teregistrasi");
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+         echo color("nevy","!] Silahkan registrasi kembali\n");
+         goto ulang;
+         }
+//  }
 
-function curl($url, $fields = null, $headers = null)
-    {
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-        if ($fields !== null) {
-            curl_setopt($ch, CURLOPT_POST, 1);
-            curl_setopt($ch, CURLOPT_POSTFIELDS, $fields);
-        }
-        if ($headers !== null) {
-            curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
-        }
-        $result   = curl_exec($ch);
-        $httpcode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-        
-        return array(
-            $result,
-            $httpcode
-        );
-	}
-function color($color = "default" , $text)
-    {
-        $arrayColor = array(
-            'grey'      => '1;30',
-            'red'       => '1;31',
-            'green'     => '1;32',
-            'yellow'    => '1;33',
-            'blue'      => '1;34',
-            'purple'    => '1;35',
-            'nevy'      => '1;36',
-            'white'     => '1;0',
-        );  
-        return "\033[".$arrayColor[$color]."m".$text."\033[0m";
-    }
-function fetch_value($str,$find_start,$find_end) {
-	$start = @strpos($str,$find_start);
-	if ($start === false) {
-		return "";
-	}
-	$length = strlen($find_start);
-	$end    = strpos(substr($str,$start +$length),$find_end);
-	return trim(substr($str,$start +$length,$end));
-}
+// echo change()."\n";
