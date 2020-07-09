@@ -18,49 +18,13 @@ $header[] = 'pin:'.$pin.'';
         echo "\n".color("purple","⏳▶️ Please wait");
         for($a=1;$a<=3;$a++){
         echo color("nevy",".");
-        sleep(20);
+        sleep(5);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("purple","Message: ".$message);
-        goto gocar;
-        }else{
-        echo "\n".color("purple"," Message: ".$message);
-	gocar:
-        echo "\n".color("nevy"," 🥂 CLAIM VOC B🥂. ");
-        echo "\n".color("purple"," ⏳▶️Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("nevy",".");
-        sleep(20);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2206"}');
-        $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
-        echo "\n".color("purple","Message: ".$message);
-        goto gofood;
-        }else{
-        echo "\n".color("purple"," Message: ".$message);
-        gofood:
-        echo "\n".color("nevy"," 🥂 CLAIM VOC C🥂.");
-        echo "\n".color("purple"," ⏳▶️Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("nevy",".");
-        sleep(10);
-        }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKEGOFOOD2206"}');
-        $message = fetch_value($code1,'"message":"','"');
-        echo "\n".color("purple"," Message: ".$message);
-        echo "\n".color("nevy"," 🥂 CLAIM VOC D🥂.");
-        echo "\n".color("purple"," ⏳▶️Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("nevy",".");
-        sleep(7);
-        }
-        sleep(1);
-        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
-        $messageboba09 = fetch_value($boba09,'"message":"','"');
-        echo "\n".color("purple"," Message: ".$messageboba09);
         sleep(1);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
