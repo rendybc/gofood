@@ -11,7 +11,6 @@ $header[] = 'X-Location: id_ID';
 $header[] ='Authorization: Bearer '.$token;
 $header[] = 'pin:'.$pin.'';
 // function change(){
-sleep(3);
 function claim($token)
     {
     $data = '{"promo_code":"PAKEGOFOOD"}';    
