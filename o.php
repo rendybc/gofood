@@ -1166,12 +1166,6 @@ $detail_voucher = curl('https://api.gojekapi.com/gopoints/v3/wallet/vouchers?lim
          echo color("nevy","!] Silahkan input kembali\n");
          goto otp;
          }
-         }else{
-         echo color("red","-] Nomor sudah teregistrasi");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-         echo color("nevy","!] Silahkan registrasi kembali\n");
-         goto ulang;
-         }
 //  }
 
 // echo change()."\n";
