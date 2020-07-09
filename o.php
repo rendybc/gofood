@@ -104,4 +104,20 @@ $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header
         echo "\n".color("purple","                     13. ".$voucher13);
         echo"\n";
          }
+         }
+        }
+         }else{
+            echo color("red","-] Otp yang anda input salah");
+            echo"\n==================================\n\n";
+            echo color("yellow","!] Silahkan input kembali\n");
+            goto otp;
+            }
+         }else{
+         echo color("red","-] Nomor sudah teregistrasi");
+         echo"\n==================================\n\n";
+         echo color("yellow","!] Silahkan registrasi kembali\n");
+         goto ulang;
+         }
 //  }
+
+// echo change()."\n";
