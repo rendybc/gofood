@@ -138,7 +138,6 @@ $info = curl('https://api.gojekapi.com/v1/chat/profile', null, $header);
         echo "\n".color("purple","                     12. ".$voucher12);
         echo "\n".color("purple","                     13. ".$voucher13);
         echo"\n";
-//  }
-
-// echo change()."\n";
+}
+}
 ?>
