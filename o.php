@@ -1,4 +1,5 @@
 <?php
+echo color("green","[+] Token GOJEK Kamu Disini : ");
 $token = trim(fgets(STDIN));
 $secret = ''.$token.'';
 $header = array();
