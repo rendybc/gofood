@@ -123,11 +123,6 @@ $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header
          echo color("nevy","!] Silahkan input kembali\n");
          goto otp;
          }
-         }else{
-         echo color("red","-] Nomor sudah teregistrasi");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-         echo color("nevy","!] Silahkan registrasi kembali\n");
-         goto repeat;
          }
 //  }
 
