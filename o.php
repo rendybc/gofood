@@ -1158,14 +1158,6 @@ $detail_voucher = curl('https://api.gojekapi.com/gopoints/v3/wallet/vouchers?lim
          }else{
          echo color("red","-] GAGAL!!!\n");
          }
-         }
-         }
-         }else{
-         echo color("red","-] Otp yang anda input salah");
-         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-         echo color("nevy","!] Silahkan input kembali\n");
-         goto otp;
-         }
 //  }
 
 // echo change()."\n";
