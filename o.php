@@ -93,6 +93,5 @@ $header[] = 'pin:'.$pin.'';
         echo "\n".color("purple","                     13. ".$voucher13);
         echo"\n";
          }
-}
-}
+
 ?>
