@@ -1,29 +1,77 @@
 <?php
-include "rendygans.php";
-echo color("green","[+] Token GOJEK Kamu Disini : ");
-$number = trim(fgets(STDIN));
-$secret = 'xxxx-xx-xxx-xxxx-xxxxxx'; //TOKEN AKUN VERIF GOPAY LO
-$headers = array();
-$header[] = 'Content-Type: application/json';
-$header[] = 'X-AppVersion: 3.46.2';
-$header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
-$header[] = 'X-Location: id_ID';
-$header[] ='Authorization: Bearer '.$token;
-$header[] = 'pin:'.$pin.'';
-// function change(){
-function claim($token)
-    {
-    $data = '{"promo_code":"eatlah"}';    
-    $claim = request("/go-promotions/v1/promotions/enrollments", $token, $data);
-    if ($claim['success'] == 1)
-        {
-        return $claim['data']['message'];
-        }
-      else
-        {
-      save("error_log.txt", json_encode($claim));
-        return false;
-        }
-    }
+###Ini Copyright###
+###https://github.com/osyduck/Gojek-Register###
 
+include ("function.php");
+echo "Choose Login or Register? Login = 1 & Register = 2: ";
+$type = trim(fgets(STDIN));
+if($type == 2){
+echo "It's Register Way\n";
+echo "Input 62 For ID and 1 For US Phone Number\n";
+echo "Enter Number: ";
+$nope = trim(fgets(STDIN));
+$register = register($nope);
+if ($register == false)
+	{
+	echo "Failed to Get OTP, Use Unregistered Number!\n";
+	}
+  else
+	{
+	echo "Enter Your OTP: ";
+	// echo "Enter Number: ";
+	$otp = trim(fgets(STDIN));
+	$verif = verif($otp, $register);
+	if ($verif == false)
+		{
+		echo "Failed to Registering Your Number!\n";
+		}
+	  else
+		{
+		echo "Ready to Claim\n";
+		$claim = claim($verif);
+		if ($claim == false)
+			{
+			echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim . "\n";
+			}
+		}
+	}
+}else if($type == 1){
+echo "It's Login Way\n";
+echo "Input 62 For ID and 1 For US Phone Number\n";
+echo "Enter Number: ";
+$nope = trim(fgets(STDIN));
+$login = login($nope);
+if ($login == false)
+	{
+	echo "Failed to Get OTP!\n";
+	}
+  else
+	{
+	echo "Enter Your OTP: ";
+	// echo "Enter Number: ";
+	$otp = trim(fgets(STDIN));
+	$verif = veriflogin($otp, $login);
+	if ($verif == false)
+		{
+		echo "Failed to Login with Your Number!\n";
+		}
+	  else
+		{
+		echo "Ready to Claim\n";
+		$claim = claim($verif);
+		if ($claim == false)
+			{
+			echo "Failed to Claim Voucher, Try to Claim Manually\n";
+			}
+		  else
+			{
+			echo $claim . "\n";
+			}
+		}
+	}
+}
 ?>
