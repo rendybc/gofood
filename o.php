@@ -1,22 +1,28 @@
 <?php
-echo color("green","[+] Token GOJEK Kamu Disini : ");
-$token = trim(fgets(STDIN));
-$secret = ''.$token.'';
-$header = array();
-$header[] = 'Content-Type: application/json';
-$header[] = 'X-AppVersion: 3.46.2';
-$header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
-$header[] = 'X-Location: id_ID';
-$header[] ='Authorization: Bearer '.$token;
-$header[] = 'pin:'.$pin.'';
-//CHECKER DETAIL AKUN
-$info = curl('https://api.gojekapi.com/v1/chat/profile', null, $header);
-    $verifs = json_decode($info[0]);
-         $akun = $verifs->data->name;
-         $nope = $verifs->data->phone;
-   echo "\n";
-   echo color("yellow","nama : ".$akun." \n");
-   echo color("yellow","nomer : 0".$nope." \n");
+date_default_timezone_set('Asia/Jakarta');
+include "rendygans.php";
+echo color("purple","# # # # # # # # # # # # # # # # # # # # # # # \n");
+echo color("nevy","  [♥]  Time  : ".date('[d-m-Y] [H:i:s]')."   \n");
+echo color("nevy","   [♡] TOLONG DIBACA DULU SEBELUM MENGGUNAKAN SC \n");
+echo color("nevy","[♥] KETIK NOMORNYA BEGINI YA 62xxxxxxxxxx \n");
+echo color("nevy","  [♡] JANGAN LUPA FOLLOW IG GUE YA : @Bananacreamy \n");
+echo color("nevy","[♥] KALO GA NGAMBIL OTOMATIS GAGAL BERARTI \n");
+echo color("nevy"," [♡] MAKLUM LAH NAMANYA JUGA SC GRATISAN \n");
+echo color("nevy"," [♥] SCRIPT INI GRATIS, BILA ADA YG JUAL CHAT TELEGRAM \n");
+echo color("purple","# # # # # # # # # # # # # # # # # # # # # # # \n");
+	echo "\n";
+	echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo color("nevy","\e[61mInput Nama Mu Disini ?: ");
+	$input = trim(fgets(STDIN));
+	echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+		goto ulang;
+
+	return rtrim( $input, "\n" );
+ulang:
+echo "\n";
+echo color("nevy","\e[61m             (Hallo Mas $input Semoga Dapet Voc'a ya)               \n");
+echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
 // function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
@@ -44,9 +50,9 @@ $info = curl('https://api.gojekapi.com/v1/chat/profile', null, $header);
         }
     }
         $data = '{"email":"'.$email.'@gmail.com","name":"'.$nama.'","phone":"+'.$hp.'","signed_up_country":"ID"}';
-        $login = request("/v5/customers", null, $data);
+        $register = request("/v5/customers", null, $data);
         if(strpos($register, '"otp_token"')){
-        $otptoken = getStr('"otp_token":"','"',$login);
+        $otptoken = getStr('"otp_token":"','"',$register);
         echo color("purple","📶▶️ KODE OTP UDAH GUA KIRIM CUK")."\n";
         otp:
         echo color("nevy","💬▶️ Otp : ");
@@ -138,6 +144,37 @@ $info = curl('https://api.gojekapi.com/v1/chat/profile', null, $header);
         echo "\n".color("purple","                     12. ".$voucher12);
         echo "\n".color("purple","                     13. ".$voucher13);
         echo"\n";
-}
-}
-?>
+         setpin:
+         echo "\n".color("nevy","SET PIN GA: y/n ");
+         $pilih1 = trim(fgets(STDIN));
+         if($pilih1 == "y" || $pilih1 == "Y"){
+         //if($pilih1 == "y" && strpos($no, "628")){
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN LO = 666123 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
+         $data2 = '{"pin":"666123"}';
+         $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
+         echo "Otp pin: ";
+         $otpsetpin = trim(fgets(STDIN));
+         $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
+         echo $verifotpsetpin;
+         }else if($pilih1 == "n" || $pilih1 == "N"){
+         die();
+         }else{
+         echo color("red","-] GAGAL!!!\n");
+         }
+         }
+         }
+         }else{
+         echo color("red","-] Otp yang anda input salah");
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+         echo color("nevy","!] Silahkan input kembali\n");
+         goto otp;
+         }
+         }else{
+         echo color("red","-] Nomor sudah teregistrasi");
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+         echo color("nevy","!] Silahkan registrasi kembali\n");
+         goto ulang;
+         }
+//  }
+
+// echo change()."\n";
