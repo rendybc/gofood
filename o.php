@@ -116,6 +116,7 @@ $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header
          die();
          }else{
          echo color("red","-] GAGAL!!!\n");
+         }
          }else{
          echo color("red","-] Otp yang anda input salah");
          echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
