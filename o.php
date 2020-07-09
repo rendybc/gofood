@@ -98,9 +98,9 @@ function claim($token, $data)
 		return false;
 		}
 	}
-echo "Choose Login? Login = 1: ";
+echo "Choose Login? Register = 1: ";
 $type = trim(fgets(STDIN));
-}else if($type == 1){
+if($type == 1){
 echo "It's Login Way\n";
 echo "Input 62 For ID and 1 For US Phone Number\n";
 echo "Enter Number: ";
