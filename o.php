@@ -11,8 +11,6 @@ $header[] = 'X-Location: id_ID';
 $header[] ='Authorization: Bearer '.$token;
 $header[] = 'pin:'.$pin.'';
 // function change(){
-      else
-        {
         file_put_contents("token/".$verif['data']['customer']['name'].".txt", $verif['data']['access_token']);
         echo "\e[93m[X] Mencoba Redeem : PAKEGOFOOD\n";
         sleep(3);
