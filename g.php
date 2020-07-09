@@ -90,30 +90,7 @@ echo color("purple","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬�
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai.')){
         echo "\n".color("purple","Message: ".$message);
-        goto gofood;
-        }else{
-        echo "\n".color("purple"," Message: ".$message);
-        gofood:
-        echo "\n".color("nevy"," 🥂 CLAIM VOC C🥂.");
-        echo "\n".color("purple"," ⏳▶️Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("nevy",".");
-        sleep(10);
-        }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKEGOFOOD0607"}');
-        $message = fetch_value($code1,'"message":"','"');
-        echo "\n".color("purple"," Message: ".$message);
-        echo "\n".color("nevy"," 🥂 CLAIM VOC D🥂.");
-        echo "\n".color("purple"," ⏳▶️Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("nevy",".");
-        sleep(7);
-        }
-        sleep(1);
-        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PAKEGOFOOD0607"}');
-        $messageboba09 = fetch_value($boba09,'"message":"','"');
-        echo "\n".color("purple"," Message: ".$messageboba09);
-        sleep(1);
+        sleep(5);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
