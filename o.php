@@ -63,3 +63,74 @@ $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("nevy","+] AKSES TOKEN LO : ".$token."\n\n");
         save("token.txt",$token);
+        echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🔊AUTO CLAIM KAYANYA CUK🔊▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo "\n".color("nevy"," 🥂CLAIM VOC A🥂.");
+        echo "\n".color("purple","⏳▶️ Please wait");
+        for($a=1;$a<=3;$a++){
+        echo color("nevy",".");
+        sleep(20);
+        }
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
+        $message = fetch_value($code1,'"message":"','"');
+        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
+        echo "\n".color("purple","Message: ".$message);
+        goto gocar;
+        }else{
+        echo "\n".color("purple"," Message: ".$message);
+	gocar:
+        }
+        sleep(1);
+        $boba09 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2206"}');
+        $messageboba09 = fetch_value($boba09,'"message":"','"');
+        echo "\n".color("purple"," Message: ".$messageboba09);
+        sleep(1);
+        $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=13&page=1', $token);
+        $total = fetch_value($cekvoucher,'"total_vouchers":',',');
+        $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
+        $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
+        $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
+        $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
+        $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
+        $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
+        echo "\n".color("purple"," Total voucher ".$total." : ");
+        echo "\n".color("nevy","                     1. ".$voucher1);
+        echo "\n".color("purple","                     2. ".$voucher2);
+        echo "\n".color("nevy","                     3. ".$voucher3);
+        echo "\n".color("purple","                     4. ".$voucher4);
+        echo "\n".color("nevy","                     5. ".$voucher5);
+        echo "\n".color("purple","                     6. ".$voucher6);
+        echo"\n";
+         setpin:
+         echo "\n".color("nevy","SET PIN GA: y/n ");
+         $pilih1 = trim(fgets(STDIN));
+         if($pilih1 == "y" || $pilih1 == "Y"){
+         //if($pilih1 == "y" && strpos($no, "628")){
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬ PIN LO = 666123 ▬▬▬▬▬▬▬▬▬▬▬▬")."\n";
+         $data2 = '{"pin":"666123"}';
+         $getotpsetpin = request("/wallet/pin", $token, $data2, null, null, $uuid);
+         echo "Otp pin: ";
+         $otpsetpin = trim(fgets(STDIN));
+         $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
+         echo $verifotpsetpin;
+         }else if($pilih1 == "n" || $pilih1 == "N"){
+         die();
+         }else{
+         echo color("red","-] GAGAL!!!\n");
+         }
+         }
+         }
+         }else{
+         echo color("red","-] Otp yang anda input salah");
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+         echo color("nevy","!] Silahkan input kembali\n");
+         goto otp;
+         }
+         }else{
+         echo color("red","-] Nomor sudah teregistrasi");
+         echo color("purple","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+         echo color("nevy","!] Silahkan registrasi kembali\n");
+         goto ulang;
+         }
+//  }
+
+// echo change()."\n";
