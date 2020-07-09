@@ -1,7 +1,5 @@
 <?php
 // function change(){
-        $nama = nama();
-        $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
 echo color("green","[+] Token GOJEK Kamu Disini : ");
 $token = trim(fgets(STDIN));
 $secret = ''.$token.'';
