@@ -128,7 +128,6 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          echo color("green","!] Masukan kembali\n");
          goto ulang;
-         }
 //  }
 
 // echo change()."\n";
