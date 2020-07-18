@@ -164,7 +164,6 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo color("white","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
          echo color("yellow","!] Silahkan registrasi kembali\n");
          goto ulang;
-         }
 //  }
 
 // echo change()."\n";
