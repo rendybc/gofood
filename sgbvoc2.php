@@ -1,7 +1,7 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "rendytampans.php";
-echo color("nevy","Token: ");
+echo color("nevy","Token mu taro sini a: ");
 $token = trim(fgets(STDIN));
         echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🔊AUTO CLAIM KAYANYA CUK🔊▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("nevy"," 🥂CLAIM VOC A🥂.");
