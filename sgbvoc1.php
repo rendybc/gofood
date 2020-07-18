@@ -140,17 +140,17 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo color("red","-] GAGAL!!!\n");
          }
          }
-         }
+        }
          }else{
-         echo color("red","-] KODE OTP LO SALAH");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("yellow","!] INPUT ULANG NOMOR LO..\n");
-         goto otp;
-         }
+            echo color("red","-] Otp yang anda input salah");
+            echo"\n==================================\n\n";
+            echo color("yellow","!] Silahkan input kembali\n");
+            goto otp;
+            }
          }else{
-         echo color("red","-] NOMOR SALAH/ERROR BY SYSTEM");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("green","!] MASUKAN LAGI\n");
+         echo color("red","-] Nomor sudah teregistrasi");
+         echo"\n==================================\n\n";
+         echo color("yellow","!] Silahkan registrasi kembali\n");
          goto ulang;
          }
 //  }
