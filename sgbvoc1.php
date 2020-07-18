@@ -113,20 +113,17 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          }else if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
-         echo color("red","-] GAGAL!!!\n");
-         }
-         }
-         }
+            echo color("red","-] Otp yang anda input salah");
+            echo"\n==================================\n\n";
+            echo color("yellow","!] Silahkan input kembali\n");
+            goto otp;
+            }
          }else{
-         echo color("red","-] Otp yang anda input salah");
-         echo"\n==================================\n\n";
-         echo color("yellow","!] Silahkan input kembali\n");
-         goto otp;
-         }
-         echo color("red","-] Nomor sudah teregistrasi/server error ulang kembali");
+         echo color("red","-] Nomor sudah teregistrasi");
          echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan registrasi kembali\n");
          goto ulang;
+         }
 //  }
 
 // echo change()."\n";
