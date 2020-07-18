@@ -139,8 +139,6 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          }else{
          echo color("red","-] GAGAL!!!\n");
          }
-         }
-        }
          }else{
             echo color("red","-] Otp yang anda input salah");
             echo"\n==================================\n\n";
