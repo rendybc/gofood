@@ -1,5 +1,4 @@
 <?php
-echo color("purple","Hello-SgbTeam");
 date_default_timezone_set('Asia/Jakarta');
 include "rendytampans.php";
 echo color("nevy","Token: ");
