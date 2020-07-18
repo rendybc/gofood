@@ -1,6 +1,45 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
 include "rendytampans.php";
+echo color("purple","                                                                       ...........                  
+                                                         .......'',,;;::ccclllllcc:,..              
+                                          .......''',,;;::cccllllllllllllllllllllllllc,.            
+                            ......''',,;;::ccclllllllllllllllllllllllllllllllllllllllllc'.          
+                 ...'',,,;;::ccclllllllllllllllllllllllllllllllllllllllllllllllllllllllll,.         
+              ..,:cllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllc'         
+            .':llllllllllllllllllllllllllllllllllllllllllllllllllllllllcc:::;:llllllllllll;.        
+           .;llllllllllllllllllllllllllllllllllllllllllllllllll:,,''.......  .,cllllllllll;.        
+          .;llllllllllllllllllllllllllllllllc:;;;,,,''...,cllll'              .:llllllllll;.        
+          ,lllllllllllllllllcc::;;;;:lllll:'.             'cllc'    .......   .:llllllllll;.        
+         .;lllllllllllc;'......     .;lllc'         .     .cllc'   .,clll:.   .:llllllllll;.        
+         .:llllllllllc'.             ,lllc.   .';;;;:,.   'clll'   .;llll:.   .:llllllllll;.        
+         .:llllllllll:.   ....''.    ,lllc.   .:lllllc,',,:llll'   .;llllc.   .:llllllllll;.        
+         .:llllllllll:.   .:llll;....;lllc.   .:lllllllllllllll'   .;llll:.   .:llllllllll;.        
+         .:llllllllll:.   .;llllcccclllllc.   .:lllllllllllllll'   .';;,,'.  .,lllllllllll;.        
+         .:llllllllll:.    .'clllllllllllc.   .:lllcc:::;;:llll'             .:lllllllllll;.        
+         .:llllllllllc'.     .;clllllllllc.   .:l:;'...   'clll'              .cllllllllll;.        
+         .:lllllllllllc;.     ..:llllllllc.   .:l:'.      .clll'    .,,;;,.   .:llllllllll;.        
+         .:lllllllllllllc,.     .':llllllc.   .:lc;'.     .clll'   .;llll:.   .:llllllllll;.        
+         .:lllllllllllllll:'.     .,cllllc.   .:llll;.    .clll'   .;llll:.   .:llllllllll;.        
+         .:llllllllllllllllc;.      .:lllc.   .:llll;.    .clll'   .;llllc.   .:llllllllll;.        
+         .:llllllllllllllllllc,.     ,lllc.   .:llll;.    .clll'   .';;;,'.   .:llllllllll;.        
+         .:llllllllllllllllllll:.    ,lllc.   .:lllc,.    .clll'              .cllllllllll;.        
+         .:llllllllllc,'..,cllll,.   ,lllc.   .......     .clll'           ..':lllllllllll;.        
+         .:llllllllll:.   .,;,,'.    ,lllc.              .;llll,...'',,;;;::cllllllllllllc'         
+         .;llllllllll:.             .;llll;..........'',;clllllllllllllllllllllllllllllll;.         
+         .;llllllllllc.        .....;llllllc:::ccllllllllllllllllllllllllllllllllllllllc,.          
+         .;lllllllllllc,'',,;;::ccclllllllllllllllllllllllllllllllllllllllllllllllllll:..           
+         .,lllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll:'.             
+          .:llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll:'.               
+           .:lllllllllllllllllllllllllllllllllllllllllllllllccc::;;cllllllllllll:,.                 
+            .'cllllllllllllllllllllllllllllllccc::;;;,,'''......  .;llllllllll:,.                   
+              .';:lllllllllllllccc::;;,,''.......                 .:llllllll:'.                     
+                 ..'',,,,,''.......                               .;llllll:'.                       
+                                                                  .:llll:'.                         
+                                                                  .:lc;..                           
+                                                                  .,;..                             
+                                                                   .                                
+                                                                                                     ");
 echo color("nevy","Token mu taro sini a: ");
 $token = trim(fgets(STDIN));
         echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🔊AUTO CLAIM KAYANYA CUK🔊▬▬▬▬▬▬▬▬▬▬▬▬");
