@@ -119,10 +119,12 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          }
          }else{
          echo color("red","-] Otp yang anda input salah");
+         echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
          }
          echo color("red","-] Nomor sudah teregistrasi/server error ulang kembali");
+         echo"\n==================================\n\n";
          echo color("yellow","!] Silahkan registrasi kembali\n");
          goto ulang;
 //  }
