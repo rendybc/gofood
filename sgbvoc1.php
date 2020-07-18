@@ -116,7 +116,6 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo color("red","-] GAGAL!!!\n");
          }
          }
-         }
          }else{
          echo color("red","-] OTP SALAH");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
