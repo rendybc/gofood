@@ -98,6 +98,7 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         echo "\n".color("white"," 2. ".$voucher2);
         echo "\n".color("white"," 3. ".$voucher3);
         echo "\n".color("white"," 4. ".$voucher4);
+        echo"\n";
          setpin:
          echo "\n".color("white","SET PIN GA: y/n ");
          $pilih1 = trim(fgets(STDIN));
@@ -123,6 +124,7 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo color("yellow","!] Input ulang nomor mu a n");
          goto otp;
          }
+         }else{
          }
          echo color("red","-] NOMOR SALAH/ERROR BY SYSTEM");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
