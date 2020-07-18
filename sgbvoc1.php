@@ -119,8 +119,6 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          }
          }else{
          echo color("red","-] Otp yang anda input salah");
-
-         echo color("white","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
          }
