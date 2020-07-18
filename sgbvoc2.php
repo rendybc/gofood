@@ -1,18 +1,8 @@
 <?php
+date_default_timezone_set('Asia/Jakarta');
 include "rendytampans.php";
-// function change(){
-        $nama = nama();
-        $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
-echo color("green","[+] Token GOJEK Kamu Disini : ");
+echo color("nevy","Token: ");
 $token = trim(fgets(STDIN));
-$secret = ''.$token.'';
-$header = array();
-$header[] = 'Content-Type: application/json';
-$header[] = 'X-AppVersion: 3.46.2';
-$header[] = "X-UniqueId: ".time()."57".mt_rand(1000,9999);
-$header[] = 'X-Location: id_ID';
-$header[] ='Authorization: Bearer '.$token;
-$header[] = 'pin:'.$pin.'';
         echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🔊AUTO CLAIM KAYANYA CUK🔊▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("nevy"," 🥂CLAIM VOC A🥂.");
         echo "\n".color("purple","⏳▶️ Please wait");
