@@ -64,7 +64,7 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(25);
+        sleep(30);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0607"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -72,7 +72,7 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
-        sleep(15);
+        sleep(5);
         }
         echo "\n".color("white","Claim B..");
         echo "\n".color("white","Please wait");
