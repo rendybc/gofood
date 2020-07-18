@@ -123,7 +123,6 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo color("yellow","!] Input ulang nomor mu a n");
          goto otp;
          }
-         else{
          }
          echo color("red","-] NOMOR SALAH/ERROR BY SYSTEM");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
