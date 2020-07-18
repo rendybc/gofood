@@ -116,15 +116,15 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo color("red","-] GAGAL!!!\n");
          }
          }else{
-         echo color("red","-] Otp yang anda input salah");
-         echo color("yellow","!] Silahkan input kembali\n");
+         echo color("red","-] OTP SALAH");
+         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+         echo color("red","!] INPUT ULANG..\n");
          goto otp;
          }
          }else{
-         echo color("red","-] Nomor sudah teregistrasi/server error ulang kembali");
-         echo color("yellow","!] Silahkan registrasi kembali\n");
+         echo color("red","-] NOMOR SALAH/SUDAH TERDAFTAR");
+         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+         echo color("red","!] MASUKAN LAGI\n");
          goto ulang;
          }
 //  }
-
-// echo change()."\n";
