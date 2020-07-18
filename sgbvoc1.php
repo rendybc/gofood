@@ -160,7 +160,6 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          echo color("yellow","!] Silahkan input kembali\n");
          goto otp;
          }
-         }else{
          echo color("red","-] Nomor sudah teregistrasi/server error ulang kembali");
          echo color("white","▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
          echo color("yellow","!] Silahkan registrasi kembali\n");
