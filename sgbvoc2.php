@@ -1,7 +1,7 @@
 <?php
+echo color("purple","Hello-SgbTeam");
 date_default_timezone_set('Asia/Jakarta');
 include "rendytampans.php";
-echo color("nevy","Hello-SgbTeam");
 echo color("nevy","Token: ");
 $token = trim(fgets(STDIN));
         echo color("purple","\n▬▬▬▬▬▬▬▬▬▬▬▬🔊AUTO CLAIM KAYANYA CUK🔊▬▬▬▬▬▬▬▬▬▬▬▬");
