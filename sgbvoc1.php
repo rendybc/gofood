@@ -59,14 +59,14 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("white","+] Akses token mu : ".$token."\n\n");
         save("token.txt",$token);
-        echo color("white","\n▬▬▬▬▬▬▬▬▬▬▬▬Claim Voc 20+10▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo color("white","\n▬▬▬▬▬▬▬▬▬▬▬▬Claim Voc▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("white","Claim A..");
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
         sleep(30);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0607"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green"," Message: ".$message);
@@ -80,7 +80,7 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
         echo color("white",".");
         sleep(1);
         }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD0607"}');
+        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
         if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
         echo "\n".color("green"," Message: ".$message);
@@ -123,7 +123,7 @@ echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
          goto otp;
          }
          }else{
-         echo color("red","-] NOMOR SALAH/SUDAH TERDAFTAR");
+         echo color("red","-] NOMOR SALAH/ERROR BY SYSTEM");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          echo color("red","!] MASUKAN LAGI\n");
          goto ulang;
