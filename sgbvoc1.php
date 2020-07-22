@@ -9,7 +9,12 @@ include "rendygans.php";
 	echo color("white","\e[61mGunakan Awalan 62 Untuk Input Pada Kolom Nomor\n");
 	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
 	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
-	goto login;
+goto login;
+}
+	return rtrim( $input, "\n" );
+ulang:
+echo "\n";
+echo "\e[96m (ADA KALANYA KALIAN BERUNTUNG DAN TIDAK$input)        \n";
 // function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
