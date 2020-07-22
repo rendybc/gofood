@@ -40,10 +40,18 @@ echo "\n".color("white","Claim?: y/n ");
         $voucher2 = getStr1('"title":"','",',$cekvoucher,"2");
         $voucher3 = getStr1('"title":"','",',$cekvoucher,"3");
         $voucher4 = getStr1('"title":"','",',$cekvoucher,"4");
+        $voucher5 = getStr1('"title":"','",',$cekvoucher,"5");
+        $voucher6 = getStr1('"title":"','",',$cekvoucher,"6");
+        $voucher7 = getStr1('"title":"','",',$cekvoucher,"7");
+        $voucher8 = getStr1('"title":"','",',$cekvoucher,"8");
         echo "\n".color("white"," Total voucher ".$total." : ");
         echo "\n".color("white"," 1. ".$voucher1);
         echo "\n".color("white"," 2. ".$voucher2);
         echo "\n".color("white"," 3. ".$voucher3);
         echo "\n".color("white"," 4. ".$voucher4);
+        echo "\n".color("white"," 5. ".$voucher5);
+        echo "\n".color("white"," 6. ".$voucher6);
+        echo "\n".color("white"," 7. ".$voucher7);
+        echo "\n".color("white"," 8. ".$voucher8);
          }
   }
