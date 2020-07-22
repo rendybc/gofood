@@ -6,7 +6,7 @@ $token = trim(fgets(STDIN));
 echo "\n".color("white","Claim?: y/n ");
         $pilihan = trim(fgets(STDIN));
         if($pilihan == "y" || $pilihan == "Y"){
-        echo color("white","▬▬▬▬▬▬▬▬▬▬▬▬VOUCHER 15+10+5▬▬▬▬▬▬▬▬▬▬▬▬");
+        echo color("white","▬▬▬▬▬▬▬▬▬▬▬▬Claim Ulang Voc▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("white","Claim A..");
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
