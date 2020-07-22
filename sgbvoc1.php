@@ -13,7 +13,7 @@ goto login;
 	return rtrim( $input, "\n" );
 ulang:
 echo "\n";
-echo color("white","\e[61mSemoga ke claim otomatis$input)        \n";
+echo "\e[96m (ADA KALANYA KALIAN BERUNTUNG DAN TIDAK$input)        \n";
 // function change(){
         $nama = nama();
         $email = str_replace(" ", "", $nama) . mt_rand(100, 999);
