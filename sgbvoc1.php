@@ -54,7 +54,7 @@ include "rendygans.php";
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(30);
+        sleep(20);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -62,7 +62,7 @@ include "rendygans.php";
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
-        sleep(5);
+        sleep(15);
         }
         echo "\n".color("white","Claim B..");
         echo "\n".color("white","Please wait");
