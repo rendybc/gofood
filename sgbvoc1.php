@@ -116,6 +116,5 @@ include "rendygans.php";
          echo color("red","-] NOMOR SALAH/ERROR BY SYSTEM");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          echo color("red","!] MASUKAN LAGI\n");
-         goto ulang;
          }
 //  }
