@@ -15,7 +15,6 @@ include "rendygans.php";
 		goto ulang;
 }
 goto login;
-}
 	return rtrim( $input, "\n" );
 ulang:
 echo "\n";
