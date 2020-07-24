@@ -127,7 +127,7 @@ include "rendygans.php";
          goto otp;
          }
          }else{
-         echo color("red","-] NOMOR SALAH/ERROR BY SYSTEM");
+         echo color("red","-] NOMOR SALAH/NOMOR SUDAH TERDAFTAR/ERROR BY SYSTEM");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          echo color("red","!] MASUKAN LAGI PHP SGBVOC1 \n");
          }
