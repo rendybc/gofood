@@ -50,25 +50,11 @@ include "rendygans.php";
         echo color("white","+] Akses token mu : ".$token."\n\n");
         save("token.txt",$token);
         echo color("white","\n▬▬▬▬▬▬▬▬▬▬▬▬Claim Voc▬▬▬▬▬▬▬▬▬▬▬▬");
-        echo "\n".color("white","Claim Go Ride..");
-        echo "\n".color("white","Please wait");
-        for($a=1;$a<=3;$a++){
-        echo color("white",".");
-        sleep(15);
-        }
-        $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOJEKAMAN"}');
-        $message = fetch_value($code1,'"message":"','"');
-        if(strpos($code1, 'Promo kamu sudah bisa dipakai')){
-        echo "\n".color("green"," Message: ".$message);
-        }else{
-        echo "\n".color("white"," Message: ".$message);
-        sleep(10);
-        }
         echo "\n".color("white","Claim A..");
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(15);
+        sleep(10);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -76,13 +62,13 @@ include "rendygans.php";
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
-        sleep(10);
+        sleep(3);
         }
         echo "\n".color("white","Claim B..");
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(15);
+        sleep(12);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"COBAGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -90,7 +76,7 @@ include "rendygans.php";
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
-        sleep(1);
+        sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
