@@ -62,7 +62,7 @@ include "rendygans.php";
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
-        sleep(1);
+        sleep(10);
         }
         echo "\n".color("white","Claim A..");
         echo "\n".color("white","Please wait");
@@ -76,7 +76,7 @@ include "rendygans.php";
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
-        sleep(1);
+        sleep(10);
         }
         echo "\n".color("white","Claim B..");
         echo "\n".color("white","Please wait");
