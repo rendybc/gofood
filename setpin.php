@@ -45,6 +45,7 @@ ulang:
          die();
          }else{
          }
+	echo "\n";
              echo "
 ";
              echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
