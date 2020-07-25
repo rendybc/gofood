@@ -28,6 +28,21 @@ ulang:
              $token = $verifs->data->access_token;
              $headers[] = 'Authorization: Bearer ' . $token;
              $live = "token-akun.txt";
+             echo "
+";
+             echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
+";
+             echo "
+";
+             goto otp;
+         }
+         echo "
+";
+         echo "Yah Gagal Mengirim Kode OTP, Gunakan Nomor Yang Sudah Terdaftar Di GOJEK Yah!
+";
+         echo "
+";
+         goto ulang;
          sleep(5);
          setpin:
          echo "\n".color("white","SET PIN Gopay mu: y/n ");
@@ -44,19 +59,4 @@ ulang:
          echo color("green","-] Done\n");
          }
          }
-             echo "
-";
-             echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
-";
-             echo "
-";
-             goto otp;
-         }
-         echo "
-";
-         echo "Yah Gagal Mengirim Kode OTP, Gunakan Nomor Yang Sudah Terdaftar Di GOJEK Yah!
-";
-         echo "
-";
-         goto ulang;
 //  }
