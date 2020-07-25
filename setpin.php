@@ -1,7 +1,11 @@
 <?php
 include "rendygoods.php";
-echo "Script ini dibuat untuk set pin gopay mu apa bila pin gopay mu belum tersetting";
-
+	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo color("white","\e[61mHallo SgbTeam, Iam @Bananacreamy\n");
+	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo color("white","\e[61mGunakan Awalan 62 Untuk Input Pada Kolom Nomor\n");
+	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo "\n";
 $secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e';
 $headers = array();
 $headers[] = 'Content-Type: application/json';
@@ -9,7 +13,7 @@ $headers[] = 'X-AppVersion: 3.48.2';
 $headers[] = "X-Uniqueid: ac94e5d0e7f3f" . rand(111, 999);
 $headers[] = 'X-Location: id_ID';
 ulang:
- echo "[+] Masukin Nomor GOJEK Kamu Disini : 62";
+ echo "[+] Masukin Nomor GOJEK Kamu Disini : ";
  $number = trim(fgets(STDIN));
  $login = curl('https://api.gojekapi.com/v3/customers/login_with_phone', '{"phone":"+' . $number . '"}', $headers);
  $logins = json_decode($login[0]);
@@ -40,7 +44,6 @@ ulang:
          }else if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
-         echo color("red","-] GAGAL!!!\n");
          }
              echo "
 ";
