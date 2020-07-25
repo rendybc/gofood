@@ -44,8 +44,9 @@ ulang:
          }else if($pilih1 == "n" || $pilih1 == "N"){
          die();
          }else{
+         echo color("red","-] GAGAL!!!\n");
          }
-	echo "\n";
+         }
              echo "
 ";
              echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
