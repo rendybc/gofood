@@ -28,6 +28,7 @@ ulang:
              $token = $verifs->data->access_token;
              $headers[] = 'Authorization: Bearer ' . $token;
              $live = "token-akun.txt";
+             }
              echo "
 ";
              echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
