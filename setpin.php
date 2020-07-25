@@ -47,7 +47,6 @@ ulang:
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          goto otp;
          }
-         }else{
          echo color("red","-] NOMOR SALAH/NOMOR SUDAH TERDAFTAR/ERROR BY SYSTEM");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          echo color("yellow","!] MASUKAN LAGI PHP SGBVOC1 \n");
