@@ -1,5 +1,7 @@
 <?php
 include "rendygoods.php";
+	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo "\n";
 echo color("white","╭━━╮
 ┃╭╮┃
 ┃╰╯╰┳━━┳━╮╭━━┳━╮╭━━┳━━┳━┳━━┳━━┳╮╭┳╮╱╭╮
