@@ -70,7 +70,6 @@ ulang:
              echo "
 ";
              goto otp;
-         }
      } else {
          echo "
 ";
