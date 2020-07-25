@@ -39,17 +39,21 @@ ulang:
          }else{
          echo color("red","-] GAGAL!!!\n");
          }
+             echo "
+";
+             echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
+";
+             echo "
+";
+             goto otp;
          }
-         }else{
-         echo color("red","-] OTP SALAH");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("yellow","!] INPUT ULANG..\n");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         goto otp;
-         }
-         echo color("red","-] NOMOR SALAH/NOMOR SUDAH TERDAFTAR/ERROR BY SYSTEM");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("yellow","!] MASUKAN LAGI PHP SGBVOC1 \n");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+     } else {
+         echo "
+";
+         echo "Yah Gagal Mengirim Kode OTP, Gunakan Nomor Yang Sudah Terdaftar Di GOJEK Yah!
+";
+         echo "
+";
          goto ulang;
+     }
 //  }
