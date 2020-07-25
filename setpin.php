@@ -42,17 +42,20 @@ ulang:
          }else{
          echo color("red","-] GAGAL!!!\n");
          }
+             echo "
+";
+             echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
+";
+             echo "
+";
+             goto otp;
          }
-         }else{
-         echo color("red","-] Kode Otp mu salah..");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("yellow","!] Input kembali kode otp mu..\n");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         goto otp;
-         }
-         echo color("red","-] Nomor salah / Error by System..");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("yellow","!] Masukan kembali mu dengan awalan 62 \n");
-         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+     } else {
+         echo "
+";
+         echo "Yah Gagal Mengirim Kode OTP, Gunakan Nomor Yang Sudah Terdaftar Di GOJEK Yah!
+";
+         echo "
+";
          goto ulang;
-//  }
+     }
