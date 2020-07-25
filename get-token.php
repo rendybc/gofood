@@ -44,7 +44,7 @@ Nomor GoJek Kamu : " . $number . "
          } else {
              echo "
 ";
-             echo color("red","Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!");
+             echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
 ";
              echo "
 ";
