@@ -52,5 +52,4 @@ ulang:
          echo color("yellow","!] MASUKAN LAGI PHP SGBVOC1 \n");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          goto ulang;
-         }
 //  }
