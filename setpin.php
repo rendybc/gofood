@@ -22,6 +22,7 @@ ulang:
              $token = $verifs->data->access_token;
              $headers[] = 'Authorization: Bearer ' . $token;
              $live = "token-akun.txt";
+         sleep(8);
          setpin:
          echo "\n".color("white","SET PIN GA: y/n ");
          $pilih1 = trim(fgets(STDIN));
