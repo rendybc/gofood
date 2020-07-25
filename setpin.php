@@ -1,5 +1,6 @@
 <?php
 include "rendygoods.php";
+echo "Script ini dibuat untuk set pin gopay mu apa bila pin gopay mu belum tersetting";
 $secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e';
 $headers = array();
 $headers[] = 'Content-Type: application/json';
@@ -7,7 +8,7 @@ $headers[] = 'X-AppVersion: 3.48.2';
 $headers[] = "X-Uniqueid: ac94e5d0e7f3f" . rand(111, 999);
 $headers[] = 'X-Location: id_ID';
 ulang:
- echo "[+] Masukin Nomor GOJEK Kamu Disini : ";
+ echo "[+] Masukin Nomor GOJEK Kamu Disini : 62";
  $number = trim(fgets(STDIN));
  $login = curl('https://api.gojekapi.com/v3/customers/login_with_phone', '{"phone":"+' . $number . '"}', $headers);
  $logins = json_decode($login[0]);
@@ -22,9 +23,9 @@ ulang:
              $token = $verifs->data->access_token;
              $headers[] = 'Authorization: Bearer ' . $token;
              $live = "token-akun.txt";
-         sleep(8);
+         sleep(5);
          setpin:
-         echo "\n".color("white","SET PIN GA: y/n ");
+         echo "\n".color("white","SET PIN Gopay mu: y/n ");
          $pilih1 = trim(fgets(STDIN));
          if($pilih1 == "y" || $pilih1 == "Y"){
          //if($pilih1 == "y" && strpos($no, "628")){
@@ -40,21 +41,19 @@ ulang:
          }else{
          echo color("red","-] GAGAL!!!\n");
          }
-             echo "
-";
-             echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
-";
-             echo "
-";
-             goto otp;
          }
-     } else {
-         echo "
-";
-         echo "Yah Gagal Mengirim Kode OTP, Gunakan Nomor Yang Sudah Terdaftar Di GOJEK Yah!
-";
-         echo "
-";
+         }else{
+         echo color("red","-] Kode Otp mu salah..");
+         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+         echo color("yellow","!] Input kembali kode otp mu..\n");
+         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+         goto otp;
+         }
+         }else{
+         echo color("red","-] Nomor salah / Error by System..");
+         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
+         echo color("yellow","!] Masukan kembali mu dengan awalan 62 \n");
+         echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          goto ulang;
-     }
+         }
 //  }
