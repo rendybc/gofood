@@ -55,7 +55,6 @@ ulang:
 ";
              goto otp;
          }
-     } else {
          echo "
 ";
          echo "Yah Gagal Mengirim Kode OTP, Gunakan Nomor Yang Sudah Terdaftar Di GOJEK Yah!
