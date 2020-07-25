@@ -59,5 +59,4 @@ ulang:
          echo $verifotpsetpin;
          echo color("green","-] Done\n");
          }
-         }
 //  }
