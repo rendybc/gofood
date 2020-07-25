@@ -53,7 +53,7 @@ Nomor GoJek Kamu : " . $number . "
      } else {
          echo "
 ";
-         echo color("yellow","Yah Gagal Mengirim Kode otp, Gunakan Nomor Yang Sudah Terdaftar Di gojek Yah!");
+         echo "Yah Gagal Mengirim Kode OTP, Gunakan Nomor Yang Sudah Terdaftar Di GOJEK Yah!
 ";
          echo "
 ";
