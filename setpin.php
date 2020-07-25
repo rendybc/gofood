@@ -42,6 +42,7 @@ ulang:
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          echo $verifotpsetpin;
          echo color("green","-] Done\n");
+	 echo "\n";
          }
          }
              echo "
