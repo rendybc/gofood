@@ -41,10 +41,7 @@ ulang:
          $otpsetpin = trim(fgets(STDIN));
          $verifotpsetpin = request("/wallet/pin", $token, $data2, null, $otpsetpin, $uuid);
          echo $verifotpsetpin;
-         }else if($pilih1 == "n" || $pilih1 == "N"){
-         die();
-         }else{
-         echo color("red","-] GAGAL!!!\n");
+         echo color("green","-] Done\n");
          }
          }
              echo "
