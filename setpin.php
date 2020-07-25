@@ -63,7 +63,6 @@ ulang:
 ";
          echo "
 ";
-         } else {
              echo "
 ";
              echo "Yah Kode OTP Salah, Coba Kamu Ulangi Lagi Deh!
