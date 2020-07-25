@@ -134,7 +134,7 @@ ulang:
          }else{
          echo color("red","-] NOMOR SALAH/NOMOR SUDAH TERDAFTAR/ERROR BY SYSTEM");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
-         echo color("yellow","!] MASUKAN LAGI PHP SGBVOC1 \n");
+         echo color("yellow","!] MASUKAN KEMBALI NOMOR HP MU \n");
          echo"\n▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n";
          goto ulang;
          }
