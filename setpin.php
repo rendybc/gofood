@@ -4,6 +4,8 @@ include "rendygoods.php";
 	echo color("white","\e[61mHallo SgbTeam, Iam @Bananacreamy\n");
 	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
 	echo color("white","\e[61mGunakan Awalan 62 Untuk Input Pada Kolom Nomor\n");
+	echo color("white","\e[61mSehabis input nomor lalu tidak ada respon apapun, berarti nomor belum terdaftar\n");
+	echo color("white","\e[61mOtp tidak masuk? Ada kesalahan pada nomor mu\n");
 	echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
 	echo "\n";
 $secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e';
