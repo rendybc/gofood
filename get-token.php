@@ -35,7 +35,7 @@ Nomor GoJek Kamu : " . $number . "
              fclose($fopen1);
              echo "
 ";
-             echo color("green"," "Token Kamu : " "); . $token . "
+             echo color("green"," Token Kamu : ".$token."\n\n");
 ";
              echo "Token Berhasil Disimpan Di File " . $live . " 
 ";
