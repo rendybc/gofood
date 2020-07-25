@@ -62,4 +62,4 @@ ulang:
          echo "
 ";
          goto ulang;
-     }
+//  }
