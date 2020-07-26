@@ -30,7 +30,7 @@ $info = curl('https://api.gojekapi.com/v1/chat/profile', null, $header);
 $detail = curl('https://api.gojekapi.com/wallet/profile/detailed', null, $header);
          $saldoo = json_decode($detail[0]);
                 $saldo = $saldoo->data->balance;
-                    echo color("yellow","Sisa Saldo Gopay = $saldo \n");
+                    echo color("white","Sisa Saldo Gopay = $saldo \n");
 //CHECKER VOUCHER YANG ADA
 $detail_voucher = curl('https://api.gojekapi.com/gopoints/v3/wallet/vouchers?limit=10&page=1', null, $header);
      $vouchers = json_decode($detail_voucher[0]);
@@ -68,7 +68,7 @@ $detail_voucher = curl('https://api.gojekapi.com/gopoints/v3/wallet/vouchers?lim
        if ($vouchers->success == true) {
        echo "
 ";
-       echo color("blue","Kamu Punya " . $total_voucher . " Voucher GOJEK
+       echo color("green","Kamu Punya " . $total_voucher . " Voucher GOJEK
 ");
        echo "
 ";
