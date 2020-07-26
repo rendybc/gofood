@@ -65,6 +65,7 @@ ulang:
         $uuid = getStr('"resource_owner_id":',',',$verif);
         echo color("white","+] Akses token mu : ".$token."\n\n");
         save("token.txt",$token);
+        sleep(10);
         echo color("white","▬▬▬▬▬▬▬▬▬▬▬▬Claim Voc▬▬▬▬▬▬▬▬▬▬▬▬");
         echo "\n".color("white","Claim A..");
         echo "\n".color("white","Please wait");
