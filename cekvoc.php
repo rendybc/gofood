@@ -1,4 +1,6 @@
 <?php
+echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo "\n";
 echo color("white","╭━━╮
 ┃╭╮┃
 ┃╰╯╰┳━━┳━╮╭━━┳━╮╭━━┳━━┳━┳━━┳━━┳╮╭┳╮╱╭╮
@@ -8,6 +10,9 @@ echo color("white","╭━━╮
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╭━╯┃
 ╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━━╯");
 	echo "\n";
+echo color("white","\e[61m▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n");
+	echo "\n";
+sleep (3);
 echo color("white","[+] Token GOJEK Kamu Disini : ");
 $token = trim(fgets(STDIN));
 $secret = ''.$token.'';
