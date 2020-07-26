@@ -21,7 +21,7 @@ echo color("white","░█▀▀█ ─█▀▀█ ░█▄─░█ ─█▀
 $secret = '83415d06-ec4e-11e6-a41b-6c40088ab51e';
 $headers = array();
 $headers[] = 'Content-Type: application/json';
-$headers[] = 'X-AppVersion: 3.48.2';
+$headers[] = 'X-AppVersion: 3.56.2';
 $headers[] = "X-Uniqueid: ac94e5d0e7f3f" . rand(111, 999);
 $headers[] = 'X-Location: id_ID';
 ulang:
