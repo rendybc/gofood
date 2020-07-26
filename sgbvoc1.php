@@ -93,7 +93,7 @@ ulang:
         echo "\n".color("green"," Message: ".$message);
         }else{
         echo "\n".color("white"," Message: ".$message);
-        sleep(1);
+        sleep(3);
         $cekvoucher = request('/gopoints/v3/wallet/vouchers?limit=10&page=1', $token);
         $total = fetch_value($cekvoucher,'"total_vouchers":',',');
         $voucher1 = getStr1('"title":"','",',$cekvoucher,"1");
@@ -105,7 +105,6 @@ ulang:
         echo "\n".color("white"," 2. ".$voucher2);
         echo "\n".color("white"," 3. ".$voucher3);
         echo "\n".color("white"," 4. ".$voucher4);
-        sleep(5);
          setpin:
          echo "\n".color("white","SET PIN GA: y/n ");
          $pilih1 = trim(fgets(STDIN));
