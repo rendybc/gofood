@@ -11,7 +11,7 @@ echo "\n".color("white","Claim?: y/n ");
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(25);
+        sleep(5);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"PESANGOFOOD2107"}');
         $message = fetch_value($code1,'"message":"','"');
@@ -25,7 +25,7 @@ echo "\n".color("white","Claim?: y/n ");
         echo "\n".color("white","Please wait");
         for($a=1;$a<=3;$a++){
         echo color("white",".");
-        sleep(10);
+        sleep(5);
         }
         $code1 = request('/go-promotions/v1/promotions/enrollments', $token, '{"promo_code":"GOJEKAMAN"}');
         $message = fetch_value($code1,'"message":"','"');
